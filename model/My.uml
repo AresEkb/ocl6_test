@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_yvcV4BWREeWRmaooDOvO2g" name="model">
+  <packagedElement xmi:type="uml:Model" xmi:id="_M2DLABWVEeWSierZQWePVw" name="nested package">
+    <packagedElement xmi:type="uml:Class" xmi:id="_1-NX8BWREeWRmaooDOvO2g" name="Person">
+      <ownedAttribute xmi:id="_4HsM8BWREeWRmaooDOvO2g" name="age1">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_BUBZoBWSEeWRmaooDOvO2g" name="fullName">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_noersBWVEeWSierZQWePVw" name="Person">
+    <ownedRule xmi:id="_Mes-8BjrEeWBRvpLpxgDaQ" name="posAge" constrainedElement="_noersBWVEeWSierZQWePVw">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_Vwq5kBjrEeWBRvpLpxgDaQ">
+        <language>OCL</language>
+        <body>self.age2 > 0</body>
+      </specification>
+    </ownedRule>
+    <ownedAttribute xmi:id="_noersRWVEeWSierZQWePVw" name="age2">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_noershWVEeWSierZQWePVw" name="fullName">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_E_Y7UBWWEeWSierZQWePVw" name="pkg"/>
+</uml:Model>
