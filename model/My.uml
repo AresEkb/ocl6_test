@@ -25,4 +25,16 @@
     </ownedAttribute>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_E_Y7UBWWEeWSierZQWePVw" name="pkg"/>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_zjBhcCYEEeWbJY59QmxhZA" name="MessageSignal">
+    <ownedAttribute xmi:id="_ltmNQCYFEeWbJY59QmxhZA" name="Header">
+      <type xmi:type="uml:Class" href="DataElements.uml#__UcroCYFEeWbJY59QmxhZA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_oLkrkCYFEeWbJY59QmxhZA" name="Body"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_dKwawCYLEeWbJY59QmxhZA" name="MessageClass">
+    <ownedAttribute xmi:id="_dKwawSYLEeWbJY59QmxhZA" name="Header">
+      <type xmi:type="uml:Class" href="DataElements.uml#__UcroCYFEeWbJY59QmxhZA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_dKwawiYLEeWbJY59QmxhZA" name="Body"/>
+  </packagedElement>
 </uml:Model>

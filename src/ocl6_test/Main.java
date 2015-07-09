@@ -1,21 +1,20 @@
 package ocl6_test;
 
 import java.io.File;
-import java.util.Iterator;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.ocl.pivot.Element;
 import org.eclipse.ocl.pivot.ExpressionInOCL;
-import org.eclipse.ocl.pivot.resource.ASResource;
 import org.eclipse.ocl.pivot.utilities.OCL;
 import org.eclipse.ocl.pivot.utilities.OCLHelper;
 import org.eclipse.ocl.pivot.utilities.ParserException;
-import org.eclipse.uml2.uml.Model;
+import org.eclipse.ocl.xtext.essentialocl.EssentialOCLStandaloneSetup;
 import org.eclipse.uml2.uml.Class;
+import org.eclipse.uml2.uml.Model;
+import org.eclipse.uml2.uml.Signal;
 import org.eclipse.uml2.uml.UMLPackage;
 
 public class Main {
@@ -27,7 +26,7 @@ public class Main {
         ResourceSet rs = new ResourceSetImpl();
         rs.setURIConverter(new CustomURIConverter());
         
-        org.eclipse.ocl.pivot.model.OCLstdlib.install();
+        EssentialOCLStandaloneSetup.doSetup();
         org.eclipse.ocl.pivot.uml.UMLStandaloneSetup.init();
         
         OCL ocl = OCL.newInstance(rs);
@@ -38,20 +37,60 @@ public class Main {
         Model uml = (Model)EcoreUtil.getObjectByType(resource.getContents(), UMLPackage.eINSTANCE.getModel());
         System.out.println("Root: " + uml);
         
-        Class person = (Class)uml.getPackagedElement("Person");
-        System.out.println("Class: " + person);
-
+        System.out.println("\n\nTest 1\n");
         try {
-            OCLHelper helper = ocl.createOCLHelper(person);
+            Class person = (Class)uml.getPackagedElement("Person");
+            System.out.println("Person: " + person);
+
+            org.eclipse.ocl.pivot.Class personAS = ocl.getMetamodelManager().getASOf(org.eclipse.ocl.pivot.Class.class, person);
+            System.out.println("PersonAS: " + personAS);
+
+            OCLHelper helper = ocl.createOCLHelper(personAS);
             System.out.println("Helper: " + helper);
             System.out.println("Context: " + helper.getContextClass());
-            ExpressionInOCL expr = ocl.createInvariant(person, "age2 > 0");
+            ExpressionInOCL expr = ocl.createInvariant(personAS, "age2 > 0");
             System.out.println("Expression: " + expr);
         }
         catch (ParserException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
+
+        System.out.println("\n\nTest 2\n");
+        try {
+            Class messageClass = (Class)uml.getPackagedElement("MessageClass");
+            System.out.println("MessageClass: " + messageClass);
+
+            org.eclipse.ocl.pivot.Class messageAS = ocl.getMetamodelManager().getASOf(org.eclipse.ocl.pivot.Class.class, messageClass);
+            System.out.println("MessageClassAS: " + messageAS);
+
+            OCLHelper helper = ocl.createOCLHelper(messageAS);
+            System.out.println("Helper: " + helper);
+            System.out.println("Context: " + helper.getContextClass());
+            ExpressionInOCL expr = ocl.createInvariant(messageAS, "Header.Id > 0");
+            System.out.println("Expression: " + expr);
+        }
+        catch (ParserException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("\n\nTest 3\n");
+        try {
+            Signal messageSignal = (Signal)uml.getPackagedElement("MessageSignal");
+            System.out.println("MessageSignal: " + messageSignal);
+
+            org.eclipse.ocl.pivot.Signal messageAS = ocl.getMetamodelManager().getASOf(org.eclipse.ocl.pivot.Signal.class, messageSignal);
+            System.out.println("MessageSignalAS: " + messageAS);
+
+            OCLHelper helper = ocl.createOCLHelper(messageAS);
+            System.out.println("Helper: " + helper);
+            System.out.println("Context: " + helper.getContextClass());
+            ExpressionInOCL expr = ocl.createInvariant(messageAS, "Header.Id > 0");
+            System.out.println("Expression: " + expr);
+        }
+        catch (ParserException e) {
+            e.printStackTrace();
+        }
+        
         ocl.dispose();
     }
 
