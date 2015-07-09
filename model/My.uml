@@ -26,12 +26,24 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_E_Y7UBWWEeWSierZQWePVw" name="pkg"/>
   <packagedElement xmi:type="uml:Signal" xmi:id="_zjBhcCYEEeWbJY59QmxhZA" name="MessageSignal">
+    <ownedRule xmi:id="_9BYjMCYNEeWbJY59QmxhZA" name="IdRule">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_ZNG1QCYSEeWbJY59QmxhZA">
+        <language>OCL</language>
+        <body>Header.Id > 0</body>
+      </specification>
+    </ownedRule>
     <ownedAttribute xmi:id="_ltmNQCYFEeWbJY59QmxhZA" name="Header">
       <type xmi:type="uml:Class" href="DataElements.uml#__UcroCYFEeWbJY59QmxhZA"/>
     </ownedAttribute>
     <ownedAttribute xmi:id="_oLkrkCYFEeWbJY59QmxhZA" name="Body"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_dKwawCYLEeWbJY59QmxhZA" name="MessageClass">
+    <ownedRule xmi:id="_e_se8CYSEeWbJY59QmxhZA" name="IdRule">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_e_se8SYSEeWbJY59QmxhZA">
+        <language>OCL</language>
+        <body>Header.Id > 0</body>
+      </specification>
+    </ownedRule>
     <ownedAttribute xmi:id="_dKwawSYLEeWbJY59QmxhZA" name="Header">
       <type xmi:type="uml:Class" href="DataElements.uml#__UcroCYFEeWbJY59QmxhZA"/>
     </ownedAttribute>

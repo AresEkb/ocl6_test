@@ -13,6 +13,7 @@ import org.eclipse.ocl.pivot.utilities.OCLHelper;
 import org.eclipse.ocl.pivot.utilities.ParserException;
 import org.eclipse.ocl.xtext.essentialocl.EssentialOCLStandaloneSetup;
 import org.eclipse.uml2.uml.Class;
+import org.eclipse.uml2.uml.Constraint;
 import org.eclipse.uml2.uml.Model;
 import org.eclipse.uml2.uml.Signal;
 import org.eclipse.uml2.uml.UMLPackage;
@@ -51,7 +52,7 @@ public class Main {
             ExpressionInOCL expr = ocl.createInvariant(personAS, "age2 > 0");
             System.out.println("Expression: " + expr);
         }
-        catch (ParserException e) {
+        catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -69,7 +70,7 @@ public class Main {
             ExpressionInOCL expr = ocl.createInvariant(messageAS, "Header.Id > 0");
             System.out.println("Expression: " + expr);
         }
-        catch (ParserException e) {
+        catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -87,7 +88,35 @@ public class Main {
             ExpressionInOCL expr = ocl.createInvariant(messageAS, "Header.Id > 0");
             System.out.println("Expression: " + expr);
         }
-        catch (ParserException e) {
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("\n\nTest 4\n");
+        try {
+            Class messageClass = (Class)uml.getPackagedElement("MessageClass");
+            System.out.println("MessageClass: " + messageClass);
+
+            for (Constraint rule : messageClass.getOwnedRules()) {
+                ExpressionInOCL expr = getExpressionInOCL(ocl, rule);
+                System.out.println("Expression: " + expr);
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("\n\nTest 5\n");
+        try {
+            Signal messageSignal = (Signal)uml.getPackagedElement("MessageSignal");
+            System.out.println("MessageSignal: " + messageSignal);
+
+            for (Constraint rule : messageSignal.getOwnedRules()) {
+                ExpressionInOCL expr = getExpressionInOCL(ocl, rule);
+                System.out.println("Expression: " + expr);
+            }
+        }
+        catch (Exception e) {
             e.printStackTrace();
         }
         
@@ -98,4 +127,11 @@ public class Main {
     {
         return URI.createFileURI(new File(relativePath).getAbsolutePath());
     }
+
+    public static ExpressionInOCL getExpressionInOCL(OCL ocl, Constraint constraint) throws ParserException
+    {
+        org.eclipse.ocl.pivot.Constraint asConstraint = ocl.getMetamodelManager().getASOf(org.eclipse.ocl.pivot.Constraint.class, constraint);
+        return ocl.getSpecification(asConstraint);
+    }
 }
+
