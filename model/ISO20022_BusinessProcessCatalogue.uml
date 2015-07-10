@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Default="http:///schemas/Default/_fNm3AAqoEd6-N_NOT9vsCA/2" xmlns:ISO20022Profile="http:///schemas/ISO20022Profile/_Z1baoCR_EeW-eZ1ZLTAX7g/50" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/Default/_fNm3AAqoEd6-N_NOT9vsCA/2 Default.profile.uml#_fNwoAAqoEd6-N_NOT9vsCA http:///schemas/ISO20022Profile/_Z1baoCR_EeW-eZ1ZLTAX7g/50 ISO20022Profile.profile.uml#_Z1fsECR_EeW-eZ1ZLTAX7g">
+  <uml:Model xmi:id="_AffEcB_9EeWTpeRxh6yIfQ" name="ISO20022_BusinessProcessCatalogue">
+    <packageImport xmi:id="_AffEcR_9EeWTpeRxh6yIfQ">
+      <importedPackage xmi:type="uml:Model" href="ISO20022_DataDictionary.uml#_AelFgB_9EeWTpeRxh6yIfQ"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_AffEch_9EeWTpeRxh6yIfQ" name="BankToCustomerDebitCreditNotificationV05">
+      <ownedAttribute xmi:id="_AffEcx_9EeWTpeRxh6yIfQ" name="GroupHeader" aggregation="composite" association="_AffEfB_9EeWTpeRxh6yIfQ">
+        <type xmi:type="uml:Class" href="ISO20022_DataDictionary.uml#_AelFgh_9EeWTpeRxh6yIfQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AffEdB_9EeWTpeRxh6yIfQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AffEdR_9EeWTpeRxh6yIfQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_AffEdh_9EeWTpeRxh6yIfQ" name="Notification" aggregation="composite" association="_AffEfh_9EeWTpeRxh6yIfQ">
+        <type xmi:type="uml:Class" href="ISO20022_DataDictionary.uml#_Aelsmx_9EeWTpeRxh6yIfQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AffEdx_9EeWTpeRxh6yIfQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AffEeB_9EeWTpeRxh6yIfQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_AffEeR_9EeWTpeRxh6yIfQ" name="SupplementaryData" aggregation="composite" association="_AffEgB_9EeWTpeRxh6yIfQ">
+        <type xmi:type="uml:Class" href="ISO20022_DataDictionary.uml#_AeoJWx_9EeWTpeRxh6yIfQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AffEeh_9EeWTpeRxh6yIfQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AffEex_9EeWTpeRxh6yIfQ"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AffEfB_9EeWTpeRxh6yIfQ" memberEnd="_AffEcx_9EeWTpeRxh6yIfQ _AffEfR_9EeWTpeRxh6yIfQ">
+      <ownedEnd xmi:id="_AffEfR_9EeWTpeRxh6yIfQ" type="_AffEch_9EeWTpeRxh6yIfQ" association="_AffEfB_9EeWTpeRxh6yIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AffEfh_9EeWTpeRxh6yIfQ" memberEnd="_AffEdh_9EeWTpeRxh6yIfQ _AffEfx_9EeWTpeRxh6yIfQ">
+      <ownedEnd xmi:id="_AffEfx_9EeWTpeRxh6yIfQ" type="_AffEch_9EeWTpeRxh6yIfQ" association="_AffEfh_9EeWTpeRxh6yIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AffEgB_9EeWTpeRxh6yIfQ" memberEnd="_AffEeR_9EeWTpeRxh6yIfQ _AffEgR_9EeWTpeRxh6yIfQ">
+      <ownedEnd xmi:id="_AffEgR_9EeWTpeRxh6yIfQ" type="_AffEch_9EeWTpeRxh6yIfQ" association="_AffEgB_9EeWTpeRxh6yIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_AffEgh_9EeWTpeRxh6yIfQ" name="Cash Management - Latest version - master"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AffEgx_9EeWTpeRxh6yIfQ" memberEnd="_AffEhB_9EeWTpeRxh6yIfQ _AffEhR_9EeWTpeRxh6yIfQ">
+      <ownedEnd xmi:id="_AffEhB_9EeWTpeRxh6yIfQ" type="_AffEch_9EeWTpeRxh6yIfQ" aggregation="composite" association="_AffEgx_9EeWTpeRxh6yIfQ"/>
+      <ownedEnd xmi:id="_AffEhR_9EeWTpeRxh6yIfQ" type="_AffEgh_9EeWTpeRxh6yIfQ" association="_AffEgx_9EeWTpeRxh6yIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_AffEhh_9EeWTpeRxh6yIfQ" name="FIToFIPaymentStatusReportV06">
+      <ownedAttribute xmi:id="_AffEhx_9EeWTpeRxh6yIfQ" name="GroupHeader" aggregation="composite" association="_AffEkx_9EeWTpeRxh6yIfQ">
+        <type xmi:type="uml:Class" href="ISO20022_DataDictionary.uml#_Aep-ER_9EeWTpeRxh6yIfQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AffEiB_9EeWTpeRxh6yIfQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AffEiR_9EeWTpeRxh6yIfQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_AffEih_9EeWTpeRxh6yIfQ" name="OriginalGroupInformationAndStatus" aggregation="composite" association="_AffElR_9EeWTpeRxh6yIfQ">
+        <type xmi:type="uml:Class" href="ISO20022_DataDictionary.uml#_Aep-Hh_9EeWTpeRxh6yIfQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AffEix_9EeWTpeRxh6yIfQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AffEjB_9EeWTpeRxh6yIfQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_AffEjR_9EeWTpeRxh6yIfQ" name="TransactionInformationAndStatus" aggregation="composite" association="_AffElx_9EeWTpeRxh6yIfQ">
+        <type xmi:type="uml:Class" href="ISO20022_DataDictionary.uml#_Aep-eB_9EeWTpeRxh6yIfQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AffEjh_9EeWTpeRxh6yIfQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AffEjx_9EeWTpeRxh6yIfQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_AffEkB_9EeWTpeRxh6yIfQ" name="SupplementaryData" aggregation="composite" association="_AffEmR_9EeWTpeRxh6yIfQ">
+        <type xmi:type="uml:Class" href="ISO20022_DataDictionary.uml#_AeoJWx_9EeWTpeRxh6yIfQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AffEkR_9EeWTpeRxh6yIfQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AffEkh_9EeWTpeRxh6yIfQ"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AffEkx_9EeWTpeRxh6yIfQ" memberEnd="_AffEhx_9EeWTpeRxh6yIfQ _AffElB_9EeWTpeRxh6yIfQ">
+      <ownedEnd xmi:id="_AffElB_9EeWTpeRxh6yIfQ" type="_AffEhh_9EeWTpeRxh6yIfQ" association="_AffEkx_9EeWTpeRxh6yIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AffElR_9EeWTpeRxh6yIfQ" memberEnd="_AffEih_9EeWTpeRxh6yIfQ _AffElh_9EeWTpeRxh6yIfQ">
+      <ownedEnd xmi:id="_AffElh_9EeWTpeRxh6yIfQ" type="_AffEhh_9EeWTpeRxh6yIfQ" association="_AffElR_9EeWTpeRxh6yIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AffElx_9EeWTpeRxh6yIfQ" memberEnd="_AffEjR_9EeWTpeRxh6yIfQ _AffEmB_9EeWTpeRxh6yIfQ">
+      <ownedEnd xmi:id="_AffEmB_9EeWTpeRxh6yIfQ" type="_AffEhh_9EeWTpeRxh6yIfQ" association="_AffElx_9EeWTpeRxh6yIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AffEmR_9EeWTpeRxh6yIfQ" memberEnd="_AffEkB_9EeWTpeRxh6yIfQ _AffEmh_9EeWTpeRxh6yIfQ">
+      <ownedEnd xmi:id="_AffEmh_9EeWTpeRxh6yIfQ" type="_AffEhh_9EeWTpeRxh6yIfQ" association="_AffEmR_9EeWTpeRxh6yIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_AffEmx_9EeWTpeRxh6yIfQ" name="Payments Clearing and Settlement - Latest version - master"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AffEnB_9EeWTpeRxh6yIfQ" memberEnd="_AffEnR_9EeWTpeRxh6yIfQ _AffEnh_9EeWTpeRxh6yIfQ">
+      <ownedEnd xmi:id="_AffEnR_9EeWTpeRxh6yIfQ" type="_AffEhh_9EeWTpeRxh6yIfQ" aggregation="composite" association="_AffEnB_9EeWTpeRxh6yIfQ"/>
+      <ownedEnd xmi:id="_AffEnh_9EeWTpeRxh6yIfQ" type="_AffEmx_9EeWTpeRxh6yIfQ" association="_AffEnB_9EeWTpeRxh6yIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_AffEnx_9EeWTpeRxh6yIfQ" name="CustomerPaymentStatusReportV03">
+      <ownedAttribute xmi:id="_AffEoB_9EeWTpeRxh6yIfQ" name="GroupHeader" aggregation="composite" association="_AffEqR_9EeWTpeRxh6yIfQ">
+        <type xmi:type="uml:Class" href="ISO20022_DataDictionary.uml#_AeqlzB_9EeWTpeRxh6yIfQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AffEoR_9EeWTpeRxh6yIfQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AffEoh_9EeWTpeRxh6yIfQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_AffEox_9EeWTpeRxh6yIfQ" name="OriginalGroupInformationAndStatus" aggregation="composite" association="_AffEqx_9EeWTpeRxh6yIfQ">
+        <type xmi:type="uml:Class" href="ISO20022_DataDictionary.uml#_AeqmFR_9EeWTpeRxh6yIfQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AffEpB_9EeWTpeRxh6yIfQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AffEpR_9EeWTpeRxh6yIfQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_AffEph_9EeWTpeRxh6yIfQ" name="OriginalPaymentInformationAndStatus" aggregation="composite" association="_AffErR_9EeWTpeRxh6yIfQ">
+        <type xmi:type="uml:Class" href="ISO20022_DataDictionary.uml#_AerMMB_9EeWTpeRxh6yIfQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AffEpx_9EeWTpeRxh6yIfQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AffEqB_9EeWTpeRxh6yIfQ"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AffEqR_9EeWTpeRxh6yIfQ" memberEnd="_AffEoB_9EeWTpeRxh6yIfQ _AffEqh_9EeWTpeRxh6yIfQ">
+      <ownedEnd xmi:id="_AffEqh_9EeWTpeRxh6yIfQ" type="_AffEnx_9EeWTpeRxh6yIfQ" association="_AffEqR_9EeWTpeRxh6yIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AffEqx_9EeWTpeRxh6yIfQ" memberEnd="_AffEox_9EeWTpeRxh6yIfQ _AffErB_9EeWTpeRxh6yIfQ">
+      <ownedEnd xmi:id="_AffErB_9EeWTpeRxh6yIfQ" type="_AffEnx_9EeWTpeRxh6yIfQ" association="_AffEqx_9EeWTpeRxh6yIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AffErR_9EeWTpeRxh6yIfQ" memberEnd="_AffEph_9EeWTpeRxh6yIfQ _AffErh_9EeWTpeRxh6yIfQ">
+      <ownedEnd xmi:id="_AffErh_9EeWTpeRxh6yIfQ" type="_AffEnx_9EeWTpeRxh6yIfQ" association="_AffErR_9EeWTpeRxh6yIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_AffErx_9EeWTpeRxh6yIfQ" name="Payments Initiation - Archive - master"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AffEsB_9EeWTpeRxh6yIfQ" memberEnd="_AffEsR_9EeWTpeRxh6yIfQ _AffEsh_9EeWTpeRxh6yIfQ">
+      <ownedEnd xmi:id="_AffEsR_9EeWTpeRxh6yIfQ" type="_AffEnx_9EeWTpeRxh6yIfQ" aggregation="composite" association="_AffEsB_9EeWTpeRxh6yIfQ"/>
+      <ownedEnd xmi:id="_AffEsh_9EeWTpeRxh6yIfQ" type="_AffErx_9EeWTpeRxh6yIfQ" association="_AffEsB_9EeWTpeRxh6yIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_AffEsx_9EeWTpeRxh6yIfQ" name="FIToFICustomerCreditTransferV05">
+      <ownedAttribute xmi:id="_AffEtB_9EeWTpeRxh6yIfQ" name="GroupHeader" aggregation="composite" association="_AffEvR_9EeWTpeRxh6yIfQ">
+        <type xmi:type="uml:Class" href="ISO20022_DataDictionary.uml#_AerztB_9EeWTpeRxh6yIfQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AffEtR_9EeWTpeRxh6yIfQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AffEth_9EeWTpeRxh6yIfQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_AffEtx_9EeWTpeRxh6yIfQ" name="CreditTransferTransactionInformation" aggregation="composite" association="_AffEvx_9EeWTpeRxh6yIfQ">
+        <type xmi:type="uml:Class" href="ISO20022_DataDictionary.uml#_Aerz6B_9EeWTpeRxh6yIfQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AffEuB_9EeWTpeRxh6yIfQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AffEuR_9EeWTpeRxh6yIfQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_AffEuh_9EeWTpeRxh6yIfQ" name="SupplementaryData" aggregation="composite" association="_AffEwR_9EeWTpeRxh6yIfQ">
+        <type xmi:type="uml:Class" href="ISO20022_DataDictionary.uml#_AeoJWx_9EeWTpeRxh6yIfQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AffEux_9EeWTpeRxh6yIfQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AffEvB_9EeWTpeRxh6yIfQ"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AffEvR_9EeWTpeRxh6yIfQ" memberEnd="_AffEtB_9EeWTpeRxh6yIfQ _AffEvh_9EeWTpeRxh6yIfQ">
+      <ownedEnd xmi:id="_AffEvh_9EeWTpeRxh6yIfQ" type="_AffEsx_9EeWTpeRxh6yIfQ" association="_AffEvR_9EeWTpeRxh6yIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AffEvx_9EeWTpeRxh6yIfQ" memberEnd="_AffEtx_9EeWTpeRxh6yIfQ _AffEwB_9EeWTpeRxh6yIfQ">
+      <ownedEnd xmi:id="_AffEwB_9EeWTpeRxh6yIfQ" type="_AffEsx_9EeWTpeRxh6yIfQ" association="_AffEvx_9EeWTpeRxh6yIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AffEwR_9EeWTpeRxh6yIfQ" memberEnd="_AffEuh_9EeWTpeRxh6yIfQ _AffEwh_9EeWTpeRxh6yIfQ">
+      <ownedEnd xmi:id="_AffEwh_9EeWTpeRxh6yIfQ" type="_AffEsx_9EeWTpeRxh6yIfQ" association="_AffEwR_9EeWTpeRxh6yIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AffEwx_9EeWTpeRxh6yIfQ" memberEnd="_AffExB_9EeWTpeRxh6yIfQ _AffExR_9EeWTpeRxh6yIfQ">
+      <ownedEnd xmi:id="_AffExB_9EeWTpeRxh6yIfQ" type="_AffEsx_9EeWTpeRxh6yIfQ" aggregation="composite" association="_AffEwx_9EeWTpeRxh6yIfQ"/>
+      <ownedEnd xmi:id="_AffExR_9EeWTpeRxh6yIfQ" type="_AffEmx_9EeWTpeRxh6yIfQ" association="_AffEwx_9EeWTpeRxh6yIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_AffExh_9EeWTpeRxh6yIfQ" name="CustomerCreditTransferInitiationV03">
+      <ownedRule xmi:id="_5kytUCVZEeWsU9bTnoD-2g" name="ControlSumRule" constrainedElement="_AffExh_9EeWTpeRxh6yIfQ">
+        <ownedComment xmi:id="_cL1H4CVcEeWsU9bTnoD-2g" annotatedElement="_5kytUCVZEeWsU9bTnoD-2g">
+          <body>Контрольная сумма должна быть равна сумме переводов</body>
+        </ownedComment>
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_5lLu4CVZEeWsU9bTnoD-2g">
+          <language>OCL</language>
+          <body>GroupHeader.ControlSum = PaymentInformation.CreditTransferTransactionInformation.Amount.InstructedAmount->sum()</body>
+        </specification>
+      </ownedRule>
+      <ownedRule xmi:id="__5PcACVbEeWsU9bTnoD-2g" name="NumberOfTransactionsRule" constrainedElement="_AffExh_9EeWTpeRxh6yIfQ">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="__5QDECVbEeWsU9bTnoD-2g">
+          <language>OCL</language>
+          <body>GroupHeader.NumberOfTransactions = PaymentInformation.CreditTransferTransactionInformation->size()</body>
+        </specification>
+      </ownedRule>
+      <ownedAttribute xmi:id="_AffExx_9EeWTpeRxh6yIfQ" name="GroupHeader" aggregation="composite" association="_AffEzR_9EeWTpeRxh6yIfQ">
+        <type xmi:type="uml:Class" href="ISO20022_DataDictionary.uml#_AesauR_9EeWTpeRxh6yIfQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AffEyB_9EeWTpeRxh6yIfQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AffEyR_9EeWTpeRxh6yIfQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_AffEyh_9EeWTpeRxh6yIfQ" name="PaymentInformation" aggregation="composite" association="_AffEzx_9EeWTpeRxh6yIfQ">
+        <type xmi:type="uml:Class" href="ISO20022_DataDictionary.uml#_Aesa4h_9EeWTpeRxh6yIfQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AffEyx_9EeWTpeRxh6yIfQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AffEzB_9EeWTpeRxh6yIfQ" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AffEzR_9EeWTpeRxh6yIfQ" memberEnd="_AffExx_9EeWTpeRxh6yIfQ _AffEzh_9EeWTpeRxh6yIfQ">
+      <ownedEnd xmi:id="_AffEzh_9EeWTpeRxh6yIfQ" type="_AffExh_9EeWTpeRxh6yIfQ" association="_AffEzR_9EeWTpeRxh6yIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AffEzx_9EeWTpeRxh6yIfQ" memberEnd="_AffEyh_9EeWTpeRxh6yIfQ _AffE0B_9EeWTpeRxh6yIfQ">
+      <ownedEnd xmi:id="_AffE0B_9EeWTpeRxh6yIfQ" type="_AffExh_9EeWTpeRxh6yIfQ" association="_AffEzx_9EeWTpeRxh6yIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AffE0R_9EeWTpeRxh6yIfQ" memberEnd="_AffE0h_9EeWTpeRxh6yIfQ _AffE0x_9EeWTpeRxh6yIfQ">
+      <ownedEnd xmi:id="_AffE0h_9EeWTpeRxh6yIfQ" type="_AffExh_9EeWTpeRxh6yIfQ" aggregation="composite" association="_AffE0R_9EeWTpeRxh6yIfQ"/>
+      <ownedEnd xmi:id="_AffE0x_9EeWTpeRxh6yIfQ" type="_AffErx_9EeWTpeRxh6yIfQ" association="_AffE0R_9EeWTpeRxh6yIfQ"/>
+    </packagedElement>
+    <profileApplication xmi:id="_AffE1B_9EeWTpeRxh6yIfQ">
+      <eAnnotations xmi:id="_AffE1R_9EeWTpeRxh6yIfQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="ISO20022Profile.profile.uml#_Z1fsECR_EeW-eZ1ZLTAX7g"/>
+      </eAnnotations>
+      <appliedProfile href="ISO20022Profile.profile.uml#_rspygA6UEeWHY4KRRC3kUQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_13QEkCVZEeWsU9bTnoD-2g">
+      <eAnnotations xmi:id="_14bJQCVZEeWsU9bTnoD-2g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_154h0CVZEeWsU9bTnoD-2g">
+      <eAnnotations xmi:id="_155I4CVZEeWsU9bTnoD-2g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Default.profile.uml#_fNwoAAqoEd6-N_NOT9vsCA"/>
+      </eAnnotations>
+      <appliedProfile href="Default.profile.uml#_a_S3wNWLEdiy4IqP8whjFA"/>
+    </profileApplication>
+    <profileApplication xmi:id="_16zH0CVZEeWsU9bTnoD-2g">
+      <eAnnotations xmi:id="_16zu4CVZEeWsU9bTnoD-2g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Deployment.profile.uml#_4OVBUD0TEeKt-L0gyEptgQ"/>
+      </eAnnotations>
+      <appliedProfile href="Deployment.profile.uml#_vjbuwOvHEdiDX5bji0iVSA"/>
+    </profileApplication>
+  </uml:Model>
+  <ISO20022Profile:BusinessProcessCatalogue xmi:id="_AffE1h_9EeWTpeRxh6yIfQ" base_Package="_AffEcB_9EeWTpeRxh6yIfQ"/>
+  <ISO20022Profile:MessageDefinition xmi:id="_AffE1x_9EeWTpeRxh6yIfQ" base_NamedElement="_AffEch_9EeWTpeRxh6yIfQ" base_Class="_AffEch_9EeWTpeRxh6yIfQ" messageDefinitionIdentifier="camt.054.001.05" xmlTag="BkToCstmrDbtCdtNtfctn"/>
+  <ISO20022Profile:MessageBuildingBlock xmi:id="_AffE2B_9EeWTpeRxh6yIfQ" base_NamedElement="_AffEcx_9EeWTpeRxh6yIfQ" base_Property="_AffEcx_9EeWTpeRxh6yIfQ" xmlTag="GrpHdr"/>
+  <ISO20022Profile:MessageBuildingBlock xmi:id="_AffE2R_9EeWTpeRxh6yIfQ" base_NamedElement="_AffEdh_9EeWTpeRxh6yIfQ" base_Property="_AffEdh_9EeWTpeRxh6yIfQ" xmlTag="Ntfctn"/>
+  <ISO20022Profile:MessageBuildingBlock xmi:id="_AffE2h_9EeWTpeRxh6yIfQ" base_NamedElement="_AffEeR_9EeWTpeRxh6yIfQ" base_Property="_AffEeR_9EeWTpeRxh6yIfQ" xmlTag="SplmtryData"/>
+  <ISO20022Profile:BusinessArea xmi:id="_AffE2x_9EeWTpeRxh6yIfQ" base_NamedElement="_AffEgh_9EeWTpeRxh6yIfQ" base_Class="_AffEgh_9EeWTpeRxh6yIfQ"/>
+  <ISO20022Profile:MessageDefinition xmi:id="_AffE3B_9EeWTpeRxh6yIfQ" base_NamedElement="_AffEhh_9EeWTpeRxh6yIfQ" base_Class="_AffEhh_9EeWTpeRxh6yIfQ" messageDefinitionIdentifier="pacs.002.001.06" xmlTag="FIToFIPmtStsRpt"/>
+  <ISO20022Profile:MessageBuildingBlock xmi:id="_AffE3R_9EeWTpeRxh6yIfQ" base_NamedElement="_AffEhx_9EeWTpeRxh6yIfQ" base_Property="_AffEhx_9EeWTpeRxh6yIfQ" xmlTag="GrpHdr"/>
+  <ISO20022Profile:MessageBuildingBlock xmi:id="_AffE3h_9EeWTpeRxh6yIfQ" base_NamedElement="_AffEih_9EeWTpeRxh6yIfQ" base_Property="_AffEih_9EeWTpeRxh6yIfQ" xmlTag="OrgnlGrpInfAndSts"/>
+  <ISO20022Profile:MessageBuildingBlock xmi:id="_AffE3x_9EeWTpeRxh6yIfQ" base_NamedElement="_AffEjR_9EeWTpeRxh6yIfQ" base_Property="_AffEjR_9EeWTpeRxh6yIfQ" xmlTag="TxInfAndSts"/>
+  <ISO20022Profile:MessageBuildingBlock xmi:id="_AffE4B_9EeWTpeRxh6yIfQ" base_NamedElement="_AffEkB_9EeWTpeRxh6yIfQ" base_Property="_AffEkB_9EeWTpeRxh6yIfQ" xmlTag="SplmtryData"/>
+  <ISO20022Profile:BusinessArea xmi:id="_AffE4R_9EeWTpeRxh6yIfQ" base_NamedElement="_AffEmx_9EeWTpeRxh6yIfQ" base_Class="_AffEmx_9EeWTpeRxh6yIfQ"/>
+  <ISO20022Profile:MessageDefinition xmi:id="_AffE4h_9EeWTpeRxh6yIfQ" base_NamedElement="_AffEnx_9EeWTpeRxh6yIfQ" base_Class="_AffEnx_9EeWTpeRxh6yIfQ" messageDefinitionIdentifier="pain.002.001.03" xmlTag="CstmrPmtStsRpt"/>
+  <ISO20022Profile:MessageBuildingBlock xmi:id="_AffE4x_9EeWTpeRxh6yIfQ" base_NamedElement="_AffEoB_9EeWTpeRxh6yIfQ" base_Property="_AffEoB_9EeWTpeRxh6yIfQ" xmlTag="GrpHdr"/>
+  <ISO20022Profile:MessageBuildingBlock xmi:id="_AffE5B_9EeWTpeRxh6yIfQ" base_NamedElement="_AffEox_9EeWTpeRxh6yIfQ" base_Property="_AffEox_9EeWTpeRxh6yIfQ" xmlTag="OrgnlGrpInfAndSts"/>
+  <ISO20022Profile:MessageBuildingBlock xmi:id="_AffE5R_9EeWTpeRxh6yIfQ" base_NamedElement="_AffEph_9EeWTpeRxh6yIfQ" base_Property="_AffEph_9EeWTpeRxh6yIfQ" xmlTag="OrgnlPmtInfAndSts"/>
+  <ISO20022Profile:BusinessArea xmi:id="_AffE5h_9EeWTpeRxh6yIfQ" base_NamedElement="_AffErx_9EeWTpeRxh6yIfQ" base_Class="_AffErx_9EeWTpeRxh6yIfQ"/>
+  <ISO20022Profile:MessageDefinition xmi:id="_AffE5x_9EeWTpeRxh6yIfQ" base_NamedElement="_AffEsx_9EeWTpeRxh6yIfQ" base_Class="_AffEsx_9EeWTpeRxh6yIfQ" messageDefinitionIdentifier="pacs.008.001.05" xmlTag="FIToFICstmrCdtTrf"/>
+  <ISO20022Profile:MessageBuildingBlock xmi:id="_AffrgB_9EeWTpeRxh6yIfQ" base_NamedElement="_AffEtB_9EeWTpeRxh6yIfQ" base_Property="_AffEtB_9EeWTpeRxh6yIfQ" xmlTag="GrpHdr"/>
+  <ISO20022Profile:MessageBuildingBlock xmi:id="_AffrgR_9EeWTpeRxh6yIfQ" base_NamedElement="_AffEtx_9EeWTpeRxh6yIfQ" base_Property="_AffEtx_9EeWTpeRxh6yIfQ" xmlTag="CdtTrfTxInf"/>
+  <ISO20022Profile:MessageBuildingBlock xmi:id="_Affrgh_9EeWTpeRxh6yIfQ" base_NamedElement="_AffEuh_9EeWTpeRxh6yIfQ" base_Property="_AffEuh_9EeWTpeRxh6yIfQ" xmlTag="SplmtryData"/>
+  <ISO20022Profile:MessageDefinition xmi:id="_Affrgx_9EeWTpeRxh6yIfQ" base_NamedElement="_AffExh_9EeWTpeRxh6yIfQ" base_Class="_AffExh_9EeWTpeRxh6yIfQ" messageDefinitionIdentifier="pain.001.001.03" xmlTag="CstmrCdtTrfInitn"/>
+  <ISO20022Profile:MessageBuildingBlock xmi:id="_AffrhB_9EeWTpeRxh6yIfQ" base_NamedElement="_AffExx_9EeWTpeRxh6yIfQ" base_Property="_AffExx_9EeWTpeRxh6yIfQ" xmlTag="GrpHdr"/>
+  <ISO20022Profile:MessageBuildingBlock xmi:id="_AffrhR_9EeWTpeRxh6yIfQ" base_NamedElement="_AffEyh_9EeWTpeRxh6yIfQ" base_Property="_AffEyh_9EeWTpeRxh6yIfQ" xmlTag="PmtInf"/>
+  <Default:Documentation xmi:id="_cMAHACVcEeWsU9bTnoD-2g" base_Comment="_cL1H4CVcEeWsU9bTnoD-2g"/>
+</xmi:XMI>

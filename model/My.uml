@@ -17,12 +17,19 @@
         <body>self.age2 > 0</body>
       </specification>
     </ownedRule>
+    <ownedRule xmi:id="_0KnZICcFEeWPKpKmNlE2EA" name="customRule" constrainedElement="_noersBWVEeWSierZQWePVw">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_0KnZIScFEeWPKpKmNlE2EA">
+        <language>OCL</language>
+        <body>custom.size() &lt;= 70</body>
+      </specification>
+    </ownedRule>
     <ownedAttribute xmi:id="_noersRWVEeWSierZQWePVw" name="age2">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
     </ownedAttribute>
     <ownedAttribute xmi:id="_noershWVEeWSierZQWePVw" name="fullName">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </ownedAttribute>
+    <ownedAttribute xmi:id="_Y2SsUCcFEeWPKpKmNlE2EA" name="custom" type="_JKMEsBmwEeWMHsyn7E5fJw"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_E_Y7UBWWEeWSierZQWePVw" name="pkg"/>
   <packagedElement xmi:type="uml:Signal" xmi:id="_zjBhcCYEEeWbJY59QmxhZA" name="MessageSignal">
@@ -48,5 +55,15 @@
       <type xmi:type="uml:Class" href="DataElements.uml#__UcroCYFEeWbJY59QmxhZA"/>
     </ownedAttribute>
     <ownedAttribute xmi:id="_dKwawiYLEeWbJY59QmxhZA" name="Body"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_JKMEsBmwEeWMHsyn7E5fJw" name="CustomType">
+    <generalization xmi:id="_jWb00CcGEeWPKpKmNlE2EA" general="_WwKQ0CcGEeWPKpKmNlE2EA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_WwKQ0CcGEeWPKpKmNlE2EA" name="CustomString">
+    <ownedOperation xmi:id="_L2er0BmwEeWMHsyn7E5fJw" name="size" isQuery="true">
+      <ownedParameter xmi:id="_O_BKEBmwEeWMHsyn7E5fJw" name="result" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
 </uml:Model>

@@ -22,6 +22,7 @@ public class Main {
 
     public static void main(String[] args) {
         final String input = "model/My.uml";
+        final String input2 = "model/ISO20022_BusinessProcessCatalogue.uml";
         
         System.out.println("Initialization");
         ResourceSet rs = new ResourceSetImpl();
@@ -119,7 +120,78 @@ public class Main {
         catch (Exception e) {
             e.printStackTrace();
         }
+
+
+        System.out.println("Loading UML model " + input2);
+        Resource resource2 = ocl.getResourceSet().getResource(createFileURI(input2), true);
+
+        Model uml2 = (Model)EcoreUtil.getObjectByType(resource2.getContents(), UMLPackage.eINSTANCE.getModel());
+        System.out.println("Root2: " + uml2);
         
+        System.out.println("\n\nTest 6\n");
+        try {
+            Class message = (Class)uml2.getPackagedElement("CustomerCreditTransferInitiationV03");
+            System.out.println("Message: " + message);
+
+            org.eclipse.ocl.pivot.Class messageAS = ocl.getMetamodelManager().getASOf(org.eclipse.ocl.pivot.Class.class, message);
+            System.out.println("MessageAS: " + messageAS);
+
+            OCLHelper helper = ocl.createOCLHelper(messageAS);
+            System.out.println("Helper: " + helper);
+            System.out.println("Context: " + helper.getContextClass());
+            ExpressionInOCL expr = ocl.createInvariant(messageAS, "GroupHeader.NumberOfTransactions = PaymentInformation.CreditTransferTransactionInformation->size()");
+            System.out.println("Expression: " + expr);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("\n\nTest 7\n");
+        try {
+            Class message = (Class)uml2.getPackagedElement("CustomerCreditTransferInitiationV03");
+            System.out.println("Message: " + message);
+
+            for (Constraint rule : message.getOwnedRules()) {
+                ExpressionInOCL expr = getExpressionInOCL(ocl, rule);
+                System.out.println("Expression: " + expr);
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        System.out.println("\n\nTest 8\n");
+        try {
+            Class person = (Class)uml.getPackagedElement("Person");
+            System.out.println("Person: " + person);
+
+            org.eclipse.ocl.pivot.Class personAS = ocl.getMetamodelManager().getASOf(org.eclipse.ocl.pivot.Class.class, person);
+            System.out.println("PersonAS: " + personAS);
+
+            OCLHelper helper = ocl.createOCLHelper(personAS);
+            System.out.println("Helper: " + helper);
+            System.out.println("Context: " + helper.getContextClass());
+            ExpressionInOCL expr = ocl.createInvariant(personAS, "custom.size() <= 70");
+            System.out.println("Expression: " + expr);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("\n\nTest 9\n");
+        try {
+            Class person = (Class)uml.getPackagedElement("Person");
+            System.out.println("Person: " + person);
+
+            for (Constraint rule : person.getOwnedRules()) {
+                ExpressionInOCL expr = getExpressionInOCL(ocl, rule);
+                System.out.println("Expression: " + expr);
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
         ocl.dispose();
     }
 
@@ -134,4 +206,3 @@ public class Main {
         return ocl.getSpecification(asConstraint);
     }
 }
-

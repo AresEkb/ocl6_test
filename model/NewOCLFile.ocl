@@ -1,0 +1,9 @@
+import 'My.uml'
+
+package model
+
+context Person
+inv:
+    custom.size() <= 70
+
+endpackage
